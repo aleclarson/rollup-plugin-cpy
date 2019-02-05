@@ -35,7 +35,7 @@ const copyFiles = params => {
 export default function(options) {
   return {
     name,
-    onwrite: () => {
+    generateBundle() {
       if (Array.isArray(options)) {
         options.forEach(option => {
           copyFiles(option)
